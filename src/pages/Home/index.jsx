@@ -11,7 +11,6 @@ const Home = () => {
                 <div className='main-container flex-column justify-between'>
                     <div>
                         <h1 className='join'>Join Our <spam className="news">Newsletter</spam></h1>
-                        <p></p>
                     </div>
                     <div className='middle-text'>
                         <h2>For Barbers Like You!</h2>
@@ -25,7 +24,6 @@ const Home = () => {
             </div>
         </section>
     </div>
-    
 )};
   
   export default Home;

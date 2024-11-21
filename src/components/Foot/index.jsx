@@ -5,7 +5,7 @@ const Foot = ({hasBtn=true}) => {
         <div className="foot">
             <p>
                 Where convenience meets quality. 
-                Pre-signup now to get a head start at launch and let <strong>iCut</strong> help grow your business.
+                Pre-signup now to get a head start at launch and let <strong>OnYou</strong> help grow your business.
             </p>
             {hasBtn ? <Link class="cta-button" href="/pre-signup">Go to Pre-Signup</Link> : null}
             <section class="social-media">
@@ -21,7 +21,7 @@ const Foot = ({hasBtn=true}) => {
                     </a>
                 </div>
             </section>
-            <p>&copy; 2024 iCut. All Rights Reserved.</p>
+            <p>&copy; 2024 OnYou. All Rights Reserved.</p>
         </div>
     )
 }
