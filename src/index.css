@@ -11,6 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary: #081e3f;
+  --secondary: #fff;
+  --text: #c5c4c2;
 }
 
 body {
@@ -44,11 +48,45 @@ body {
 }
 
 .app {
-  height: calc(100vh - 77px);
+  height: calc(100vh - 64px);
   width: 100vw;
   overflow: hidden;
-  background: linear-gradient( to bottom, #e3d3b8 0%, #e3d3b8 50%, #ffffff 50%, #ffffff 100% );
+  background: -webkit-linear-gradient( to bottom, var(--primary) 0%, var(--primary) 50%, var(--secondary) 50%, var(--secondary) 100% );
 }
+
+.terms-section {
+  height: 100%;
+  overflow: scroll;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.terms-section header h1{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.terms-section h2{
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.terms-section p{
+  color: #595959;
+  font-size: 14px;
+}
+
+.terms-section footer{
+  margin-bottom: 50px;
+}
+
+.terms-section footer p{
+  margin-top: 20px;
+  text-align: center;
+}
+
 
 .image-container {
   height: 653px;
@@ -61,7 +99,7 @@ body {
 .layer {
   position: relative;
   background: #2727272b;
-  color: #ffffff;
+  color: var(--secondary);
   height: 100%;
 }
 
@@ -72,14 +110,14 @@ body {
 }
 
 .main-section {
-  height: calc(100vh - 77px);
+  height: calc(100vh - 64px);
   width: 100%;
   background: linear-gradient(
     to bottom,
-    #e3d3b8 0%,
-    #e3d3b8 50%,
-    #ffffff 50%,
-    #ffffff 100%
+    var(--primary) 0%,
+    var(--primary) 50%,
+    var(--secondary) 50%,
+    var(--secondary) 100%
   );
 }
 
@@ -87,10 +125,10 @@ body {
   height: auto;
   background: linear-gradient(
     to bottom,
-    #e3d3b8 0%,
-    #e3d3b8 50%,
-    #ffffff 50%,
-    #ffffff 100%
+    var(--primary) 0%,
+    var(--primary) 50%,
+    var(--secondary) 50%,
+    var(--secondary) 100%
   );
 }
 
@@ -109,7 +147,7 @@ body {
 }
 
 .news {
-  color: #000;
+  color: var(--text);
   font-size: 70px;
 }
 
@@ -141,8 +179,8 @@ input {
 
 input:focus, input:focus-visible {
   outline: none;
-  border-bottom: 1px solid #e3d3b8;
-  box-shadow: 0px 7px 5px -6px #e3d3b8
+  border-bottom: 1px solid #081e3f;
+  box-shadow: 0px 7px 5px -6px #081e3f
 }
 
 .checkbox-input {
@@ -154,8 +192,8 @@ input:focus, input:focus-visible {
 
 .subcrib-btn {
   padding: 10px;
-  background-color: #e3d3b8;
-  color: black;
+  background-color: #081e3f;
+  color: var(--text);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -182,12 +220,17 @@ h3 {
 p {
   font-size: 16px;
   line-height: 1.6;
-  color: #000;
+  color: var(--text);
+}
+
+.reserve-home {
+  text-align: center;
+  font-size: 11px;
 }
 
 .hero-container {
   position: relative;
-  height: 100%;
+  height: calc(100vh - 95px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -227,14 +270,14 @@ p {
 .middle-text h2 {
   font-size: 22px;
   font-weight: 600;
-  color: #000;
+  color: #fff;
   text-align: center;
 }
 
 .middle-text p {
   font-size: 14px;
   font-weight: 600;
-  color: #595959;
+  color: var(--text);
   text-align: center;
 }
 
@@ -246,7 +289,7 @@ p {
 }
 
 .form-container h3 {
-  color: #e3d3b8
+  color: #081e3f
 }
 
 .form-input {
@@ -273,8 +316,8 @@ p {
 }
 
 .navbar {
-  background-color: #fff;
-  padding: 15px 0;
+  background: var(--secondary);
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -287,7 +330,11 @@ p {
   font-size: 20px;
   padding-left: 20px;
   text-decoration: none;
-  color: #e3d3b8;
+  color: var(--primary);
+}
+
+.logo img{
+  height: 30px;
 }
 
 .navbar ul {
@@ -306,14 +353,16 @@ p {
 }
 
 .nav-link {
-  color: #e3d3b8;
+  color: var(--primary);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 20px;
+  transition: all .2s;
 }
 
 .nav-link:hover {
-  background-color: #555;
+  background-color: var(--primary);
+  color: var(--secondary);
   border-radius: 4px;
 }
 

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 import './index.css'
+import Terms from './pages/Terms';
 
 export function App() {
 
@@ -18,6 +19,7 @@ export function App() {
           <Home path="/" />
           <About path="/about" />
           <GetEmailsForm path="/pre-signup" />
+          <Terms path="/terms-conditions" />
         </Router>
       </div>
     </>

@@ -1,4 +1,5 @@
 import { Link } from 'preact-router/match'; 
+import AllRights from './AllRights';
 
 const Foot = ({hasBtn=true}) => {
     return (
@@ -21,7 +22,7 @@ const Foot = ({hasBtn=true}) => {
                     </a>
                 </div>
             </section>
-            <p>&copy; 2024 OnYou. All Rights Reserved.</p>
+            <AllRights />
         </div>
     )
 }

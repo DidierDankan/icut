@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks';
 import emailjs from 'emailjs-com';
+import { Link } from 'preact-router/match';
 
 emailjs.init('CsPIUAk0EkBOtXamM');
 
@@ -101,7 +102,7 @@ const Form = ({isHome=false}) => {
                     onChange={handleTerms}
                     required
                     />
-                    Aceita o nossos Termos de serviço?
+                    Aceita o nossos&nbsp;<Link href="/terms-conditions" target="_blank">Termos de serviço</Link>?
                 </label>
                 <button className='subcrib-btn' type="submit" disabled={loading || success?.length}>
                 {loading ? 'Sending...' : 'Subscribe'}
